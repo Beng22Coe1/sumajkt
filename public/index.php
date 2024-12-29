@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include_once('../inc/topNav.php')?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUMAJKT</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
+<style>
         .hero-section {
             background-color: #1a1a3c;
             color: white;
@@ -46,41 +40,8 @@
             color: #666;
         }
     </style>
-</head>
 
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">SUMAJKT</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nyumbani</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Kutuhusu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="product.html">Bidhaa na Huduma</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="news.html">Habari na Matukio</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacts.html">Mawasiiano</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
@@ -95,17 +56,18 @@
                         shughuli za Jeshi la Kujenga Taifa.</p>
                     <a href="#" class="btn btn-custom btn-lg">Show More</a>
                 </div>
+                
                 <!-- Right Column -->
                 <div class="col-lg-6">
                     <div class="row g-3">
                         <div class="col-4">
-                            <img src="https://via.placeholder.com/500x300" alt="Map">
+                            <img src="../uploads/sumajkt_prod1.webp" alt="Map">
                         </div>
                         <div class="col-4">
-                            <img src="https://via.placeholder.com/250x150" alt="Business">
+                            <img src="../uploads/sumajkt_prod1.webp" alt="Business">
                         </div>
                         <div class="col-4">
-                            <img src="https://via.placeholder.com/250x150" alt="Wildlife">
+                            <img src="../uploads/sumajkt_prod1.webp" alt="Wildlife">
                         </div>
                     </div>
                 </div>
