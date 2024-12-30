@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../libs/bootstrap5/css/bootstrap.min.css ">
     <script src="../libs/bootstrap5/js/bootstrap.min.js"></script>
+    <style>
+        .nav-link{
+            color: rgba(47, 54, 144, 0.6);
+            font-weight: bolder;
+        }
+    </style>
 </head>
 
 <!-- Navbar -->
@@ -21,20 +27,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nyumbani</a>
+                    <a class="nav-link" href="../public/index.php">Nyumbani</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">Kutuhusu</a>
+                    <a class="nav-link" href="../public/index.php#about">Kutuhusu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/public/product.html">Bidhaa na Huduma</a>
+                    <a class="nav-link" href="../public/product.php">Bidhaa na Huduma</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="news.html">Habari na Matukio</a>
+                    <a class="nav-link" href="../public/news.php">Habari na Matukio</a>
                 </li>
-
                 <li class="nav-item">
-                    <a class="nav-link" href="contacts.html">Mawasiiano</a>
+                    <a class="nav-link" href="../public/contacts.php">Mawasiliano</a>
                 </li>
             </ul>
         </div>

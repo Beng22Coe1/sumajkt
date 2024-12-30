@@ -37,13 +37,13 @@
                             <div class="carousel-item active">
                                 <div class="row g-3">
                                     <div class="col-4">
-                                        <img src="../uploads/sumajkt_prod1.webp" alt="Map">
+                                        <img src="../uploads/africahome-01.webp" alt="Map">
                                     </div>
                                     <div class="col-4">
-                                        <img src="../uploads/sumajkt_prod1.webp" alt="Business">
+                                        <img src="../uploads/africahome-01.webp" alt="Business">
                                     </div>
                                     <div class="col-4">
-                                        <img src="../uploads/sumajkt_prod1.webp" alt="Wildlife">
+                                        <img src="../uploads/africahome-01.webp" alt="Wildlife">
                                     </div>
                                 </div>
                             </div>
@@ -55,13 +55,13 @@
                                     </div>
                                     <div class="col-4">
                                         <div class="row">
-                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation">
+                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
                                         </div>
                                         <div class="row">
-                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation">
+                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
                                         </div>
                                         <div class="row">
-                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation">
+                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
                                         </div>
                                     </div>
                                 </div>
@@ -69,28 +69,38 @@
 
                             <div class="carousel-item">
                                 <div class="row g-3">
-                                    <div class="col-4">
-                                        <img src="../uploads/sumajkt_prod2.webp" alt="Industry">
+                                    <div class="col-8">
+                                    <img src="../uploads/sumajkt_prod6.webp" alt="Energy Product" style="width: 100%; height: auto;">
                                     </div>
                                     <div class="col-4">
-                                        <img src="../uploads/sumajkt_prod2.webp" alt="Agriculture">
-                                    </div>
-                                    <div class="col-4">
-                                        <img src="../uploads/sumajkt_prod2.webp" alt="Technology">
+                                        <div class="row">
+                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
+                                        </div>
+                                        <div class="row">
+                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
+                                        </div>
+                                        <div class="row">
+                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> 
 
                             <div class="carousel-item">
                                 <div class="row g-3">
-                                    <div class="col-4">
-                                        <img src="../uploads/sumajkt_prod3.webp" alt="Energy">
+                                    <div class="col-8">
+                                    <img src="../uploads/sumajkt_prod6.webp" alt="Energy Product" style="width: 100%; height: auto;">
                                     </div>
                                     <div class="col-4">
-                                        <img src="../uploads/sumajkt_prod3.webp" alt="Manufacturing">
-                                    </div>
-                                    <div class="col-4">
-                                        <img src="../uploads/sumajkt_prod3.webp" alt="Innovation">
+                                        <div class="row">
+                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
+                                        </div>
+                                        <div class="row">
+                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
+                                        </div>
+                                        <div class="row">
+                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
+                                        </div>
                                     </div>
                                 </div>
                             </div>

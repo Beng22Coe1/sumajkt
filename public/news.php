@@ -1,3 +1,4 @@
+<?php include_once('../inc/topNav.php') ?>
 
     <style>
         body {
@@ -15,14 +16,14 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .news-section .btn {
-            background-color: #1a73e8;
+            background-color: #1a1a3c;
             color: white;
         }
         .news-section .btn:hover {
             background-color: #145db7;
         }
     </style>
-</head>
+
 <body>
     <!-- News Section -->
     <section class="news-section py-5">
