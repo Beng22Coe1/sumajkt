@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../libs/bootstrap5/css/bootstrap.min.css ">
     <script src="../libs/bootstrap5/js/bootstrap.min.js"></script>
 </head>
@@ -11,7 +12,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        
+
         <a class="navbar-brand" href="#">SUMAJKT</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
