@@ -10,7 +10,7 @@
     <style>
         .nav-link{
             color: rgba(47, 54, 144, 0.6);
-            font-weight: bolder;
+            font-weight:bold;
         }
     </style>
 </head>
