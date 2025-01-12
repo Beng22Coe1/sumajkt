@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Password is correct, set up the session
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['user_name'] = $user['first_name'];
+                $_SESSION['last_activity'] = time();
 
                 // Redirect to a dashboard or home page
                 header("Location: index.php");

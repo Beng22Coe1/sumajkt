@@ -43,7 +43,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="../admin/slidesUpdate.php">
+                <a class="nav-link collapsed" href="../admin/slidesUpdate2.php">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Slides</span>
                 </a>

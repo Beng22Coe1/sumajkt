@@ -1,3 +1,7 @@
+<?php 
+require_once('../config/db_config.php');
+require_once('../config/session_config.php');
+?>
 <body id="page-top">
     <!-- Page Wrapper -->
     <div id="wrapper">

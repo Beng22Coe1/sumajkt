@@ -1,3 +1,36 @@
+<?php
+require_once('../config/db_config.php');
+require_once('../config/session_config.php');
+
+try {
+    //$pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    //$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    if (isset($_SESSION['user_id'])) {
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE id = :user_id");
+        $stmt->execute(['user_id' => $_SESSION['user_id']]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        if (!$user) {
+            throw new Exception('User not found.');
+        }
+    } else {
+        // Redirect to login page if session user_id is not set
+        header('Location: login.php');
+        exit();
+    }
+
+    // $stmt2 = $pdo->prepare("SELECT * FROM users");
+    // $stmt2->execute();
+    // $user_role = $_SESSION['role']; // User role ('admin' or 'user')
+
+
+} catch (PDOException $e) {
+    die("Database error: " . $e->getMessage());
+} catch (Exception $e) {
+    die("Error: " . $e->getMessage());
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +68,7 @@
     <li class="nav-item dropdown no-arrow">
         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Super Admin</span>
+            <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= htmlspecialchars($user['first_name']) . " " .htmlspecialchars($user['last_name']) ?></span>
             <img class="img-profile rounded-circle"
                 src="../assets/img/undraw_profile.svg">
         </a>

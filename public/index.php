@@ -1,4 +1,10 @@
-<?php include_once('../inc/topNav.php') ?>
+<?php
+include_once('../inc/topNav.php');
+require('../config/db_config.php');
+$stmt = $pdo->query("SELECT * FROM slides");
+$slides = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+?>
 
 <style>
     .btn-custom {
@@ -14,9 +20,11 @@
 
 <body>
     <!-- Hero Section -->
+
+
     <section class="hero-section">
         <div class="">
-            <div class="row align-items-center">
+            <div class="row align-items-center p-3">
 
                 <!-- Left Column -->
                 <div class="col-md-4 mb-4 mb-lg-0">
@@ -27,83 +35,116 @@
                         kuzalisha zaidi na kwa faida na hivyo kusaidia serikali katika kupunguza matumizi ya kuendesha
                         shughuli za Jeshi la Kujenga Taifa.</p>
                     <a href="#" class="btn btn-custom btn-lg">Show More</a>
+
                 </div>
 
                 <!-- Right Column -->
                 <div class="col-md-8">
                     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-
                         <div class="carousel-inner">
+                            <!-- Page 1 -->
                             <div class="carousel-item active">
                                 <div class="row g-3">
-                                    <div class="col-4">
-                                        <img src="../uploads/africahome-01.webp" alt="Map">
+                                    <div class="col-4  " style="aspect-ratio: 75/127;">
+                                        <img src="../<?php echo $slides[0]['image_url'] ?>" alt="Energy Product"
+                                            style="width: 100%; height: 100%; object-fit: cover;">
+
                                     </div>
-                                    <div class="col-4">
-                                        <img src="../uploads/africahome-01.webp" alt="Business">
+                                    <div class="col-4 " style="aspect-ratio: 75/127;">
+                                        <img src="../<?php echo $slides[1]['image_url'] ?>" alt="<?php echo $slides[1]['image_url'] ?>"
+                                            style="width: 100%; height: 100%; object-fit: cover;">
                                     </div>
-                                    <div class="col-4">
-                                        <img src="../uploads/africahome-01.webp" alt="Wildlife">
+                                    <div class="col-4 " style="aspect-ratio: 75/127;">
+                                        <img src="../<?php echo $slides[2]['image_url'] ?>" alt="<?php echo $slides[2]['image_url'] ?>"
+                                            style="width: 100%; height: 100%; object-fit: cover;">
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- Page 2 -->
                             <div class="carousel-item">
                                 <div class="row g-3">
-                                    <div class="col-8">
-                                    <img src="../uploads/sumajkt_prod6.webp" alt="Energy Product" style="width: 100%; height: auto;">
+                                    <!-- Larger Div (Aspect Ratio: 140/118) -->
+                                    <div class="col-8 " style="aspect-ratio: 135/111;">
+                                        <img src="../<?= $slides[2]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
+                                            style="width: 100%; height: 100%; object-fit: cover;">
                                     </div>
+
+                                    <!-- Smaller Divs (Aspect Ratio: 140/78) -->
                                     <div class="col-4">
-                                        <div class="row">
-                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
+                                        <div class="row " style="aspect-ratio: 135/73;">
+                                            <img src="../<?= $slides[0]['image_url'] ?>" alt="../<?= $slides[0]['image_url'] ?>"
+                                                style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
-                                        <div class="row">
-                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
+                                        <div class="row mt-1" style="aspect-ratio: 135/73;">
+                                            <img src="../<?= $slides[2]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
+                                                style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
-                                        <div class="row">
-                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
+                                        <div class="row mt-1" style="aspect-ratio: 135/73;">
+                                            <img src="../<?= $slides[1]['image_url'] ?>" alt="../<?= $slides[1]['image_url'] ?>"
+                                                style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="carousel-item">
-                                <div class="row g-3">
-                                    <div class="col-8">
-                                    <img src="../uploads/sumajkt_prod6.webp" alt="Energy Product" style="width: 100%; height: auto;">
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="row">
-                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
-                                        </div>
-                                        <div class="row">
-                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
-                                        </div>
-                                        <div class="row">
-                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> 
 
+                            <!-- Page 3 -->
                             <div class="carousel-item">
                                 <div class="row g-3">
-                                    <div class="col-8">
-                                    <img src="../uploads/sumajkt_prod6.webp" alt="Energy Product" style="width: 100%; height: auto;">
+                                    <!-- Larger Div (Aspect Ratio: 140/118) -->
+                                    <div class="col-8 " style="aspect-ratio: 135/111;">
+                                        <img src="../<?= $slides[2]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
+                                            style="width: 100%; height: 100%; object-fit: cover;">
                                     </div>
+
+                                    <!-- Smaller Divs (Aspect Ratio: 140/78) -->
                                     <div class="col-4">
-                                        <div class="row">
-                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
+                                        <div class="row " style="aspect-ratio: 135/73;">
+                                            <img src="../<?= $slides[0]['image_url'] ?>" alt="../<?= $slides[0]['image_url'] ?>"
+                                                style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
-                                        <div class="row">
-                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
+                                        <div class="row mt-1" style="aspect-ratio: 135/73;">
+                                            <img src="../<?= $slides[2]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
+                                                style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
-                                        <div class="row">
-                                            <img src="../uploads/sumajkt_prod3.webp" alt="Innovation" style="width: 70%; height: auto;">
+                                        <div class="row mt-1" style="aspect-ratio: 135/73;">
+                                            <img src="../<?= $slides[1]['image_url'] ?>" alt="../<?= $slides[1]['image_url'] ?>"
+                                                style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+
+                            <!-- Page 4 -->
+                            <div class="carousel-item">
+                                <div class="row g-3">
+                                    <!-- Larger Div (Aspect Ratio: 140/118) -->
+                                    <div class="col-8 " style="aspect-ratio: 135/111;">
+                                        <img src="../<?= $slides[2]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
+                                            style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+
+                                    <!-- Smaller Divs (Aspect Ratio: 140/78) -->
+                                    <div class="col-4">
+                                        <div class="row " style="aspect-ratio: 135/73;">
+                                            <img src="../<?= $slides[0]['image_url'] ?>" alt="../<?= $slides[0]['image_url'] ?>"
+                                                style="width: 100%; height: 100%; object-fit: cover;">
+                                        </div>
+                                        <div class="row mt-1" style="aspect-ratio: 135/73;">
+                                            <img src="../<?= $slides[2]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
+                                                style="width: 100%; height: 100%; object-fit: cover;">
+                                        </div>
+                                        <div class="row mt-1" style="aspect-ratio: 135/73;">
+                                            <img src="../<?= $slides[1]['image_url'] ?>" alt="../<?= $slides[1]['image_url'] ?>"
+                                                style="width: 100%; height: 100%; object-fit: cover;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </div>
 
                         <!-- Bullet Navigation -->
@@ -145,7 +186,6 @@
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-6">
-                    <img src="https://via.placeholder.com/500x400" alt="Global Network" class="img-fluid">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="fw-bold">SUMAJKT</h2>
