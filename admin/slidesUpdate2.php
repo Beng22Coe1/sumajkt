@@ -78,6 +78,8 @@ $slides = $stmt->fetchAll(PDO::FETCH_ASSOC);
         width: 100%;
         height: 100%;
         overflow: hidden;
+        box-shadow: 1px 1px 9px black;
+        border-radius: 5px;
     }
 
     .image-container img {
@@ -122,6 +124,10 @@ $slides = $stmt->fetchAll(PDO::FETCH_ASSOC);
         font-size: 1rem;
         margin: 0;
     }
+
+    
+
+
 </style>
 
 <body id="page-top">
@@ -140,7 +146,7 @@ $slides = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     <div class="carousel-item active">
                                         <div class="row g-3">
                                             <div class="col-4" style="aspect-ratio: 75/127;">
-                                                <div class="image-container dropdown">
+                                                <div class="image-container">
                                                     <img src="../<?= $slides[0]['image_url'] ?>" alt="../<?= $slides[0]['image_url'] ?>">
                                                     <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal" data-id="<?= $slides[0]['id'] ?>" >
                                                         <i class="fas fa-image"></i>
