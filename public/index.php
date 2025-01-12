@@ -66,22 +66,22 @@ $slides = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <div class="row g-3">
                                     <!-- Larger Div (Aspect Ratio: 140/118) -->
                                     <div class="col-8 " style="aspect-ratio: 135/111;">
-                                        <img src="../<?= $slides[2]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
+                                        <img src="../<?= $slides[3]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
                                             style="width: 100%; height: 100%; object-fit: cover;">
                                     </div>
 
                                     <!-- Smaller Divs (Aspect Ratio: 140/78) -->
                                     <div class="col-4">
                                         <div class="row " style="aspect-ratio: 135/73;">
-                                            <img src="../<?= $slides[0]['image_url'] ?>" alt="../<?= $slides[0]['image_url'] ?>"
+                                            <img src="../<?= $slides[4]['image_url'] ?>" alt="../<?= $slides[0]['image_url'] ?>"
                                                 style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
                                         <div class="row mt-1" style="aspect-ratio: 135/73;">
-                                            <img src="../<?= $slides[2]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
+                                            <img src="../<?= $slides[5]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
                                                 style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
                                         <div class="row mt-1" style="aspect-ratio: 135/73;">
-                                            <img src="../<?= $slides[1]['image_url'] ?>" alt="../<?= $slides[1]['image_url'] ?>"
+                                            <img src="../<?= $slides[6]['image_url'] ?>" alt="../<?= $slides[1]['image_url'] ?>"
                                                 style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
                                     </div>
@@ -94,22 +94,22 @@ $slides = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <div class="row g-3">
                                     <!-- Larger Div (Aspect Ratio: 140/118) -->
                                     <div class="col-8 " style="aspect-ratio: 135/111;">
-                                        <img src="../<?= $slides[2]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
+                                        <img src="../<?= $slides[7]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
                                             style="width: 100%; height: 100%; object-fit: cover;">
                                     </div>
 
                                     <!-- Smaller Divs (Aspect Ratio: 140/78) -->
                                     <div class="col-4">
                                         <div class="row " style="aspect-ratio: 135/73;">
-                                            <img src="../<?= $slides[0]['image_url'] ?>" alt="../<?= $slides[0]['image_url'] ?>"
+                                            <img src="../<?= $slides[8]['image_url'] ?>" alt="../<?= $slides[0]['image_url'] ?>"
                                                 style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
                                         <div class="row mt-1" style="aspect-ratio: 135/73;">
-                                            <img src="../<?= $slides[2]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
+                                            <img src="../<?= $slides[9]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
                                                 style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
                                         <div class="row mt-1" style="aspect-ratio: 135/73;">
-                                            <img src="../<?= $slides[1]['image_url'] ?>" alt="../<?= $slides[1]['image_url'] ?>"
+                                            <img src="../<?= $slides[10]['image_url'] ?>" alt="../<?= $slides[1]['image_url'] ?>"
                                                 style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
                                     </div>
@@ -122,22 +122,22 @@ $slides = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <div class="row g-3">
                                     <!-- Larger Div (Aspect Ratio: 140/118) -->
                                     <div class="col-8 " style="aspect-ratio: 135/111;">
-                                        <img src="../<?= $slides[2]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
+                                        <img src="../<?= $slides[11]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
                                             style="width: 100%; height: 100%; object-fit: cover;">
                                     </div>
 
                                     <!-- Smaller Divs (Aspect Ratio: 140/78) -->
                                     <div class="col-4">
                                         <div class="row " style="aspect-ratio: 135/73;">
-                                            <img src="../<?= $slides[0]['image_url'] ?>" alt="../<?= $slides[0]['image_url'] ?>"
+                                            <img src="../<?= $slides[12]['image_url'] ?>" alt="../<?= $slides[0]['image_url'] ?>"
                                                 style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
                                         <div class="row mt-1" style="aspect-ratio: 135/73;">
-                                            <img src="../<?= $slides[2]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
+                                            <img src="../<?= $slides[13]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
                                                 style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
                                         <div class="row mt-1" style="aspect-ratio: 135/73;">
-                                            <img src="../<?= $slides[1]['image_url'] ?>" alt="../<?= $slides[1]['image_url'] ?>"
+                                            <img src="../<?= $slides[14]['image_url'] ?>" alt="../<?= $slides[1]['image_url'] ?>"
                                                 style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
                                     </div>

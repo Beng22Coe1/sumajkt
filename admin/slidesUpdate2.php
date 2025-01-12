@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['imageFile'])) {
                 // Set parameters
                 $filePath = "uploads/slides/" . $fileName; // Use relative path for database
                 $altText = htmlspecialchars($_POST['alt_text'] ?? 'Default Alt Text');
-                $slideId = 5;
+                $slideId = $_POST['slide_id'];
 
                 // Execute the query
                 if ($stmt->execute()) {
@@ -133,6 +133,7 @@ $slides = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                 <div class="container-fluid">
                     <div class="row">
+
                         <div class="col-xl-6 col-lg-6">
                             <div class="card shadow mb-4">
                                 <div class="card-body">
@@ -140,17 +141,8 @@ $slides = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                         <div class="row g-3">
                                             <div class="col-4" style="aspect-ratio: 75/127;">
                                                 <div class="image-container dropdown">
-                                                    <img src="../uploads/sumajkt_prod4.webp" alt="Energy Product">
-                                                    <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal">
-                                                        <i class="fas fa-image"></i>
-                                                        <p>Update this slide</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-4" style="aspect-ratio: 75/127;">
-                                                <div class="image-container">
                                                     <img src="../<?= $slides[0]['image_url'] ?>" alt="../<?= $slides[0]['image_url'] ?>">
-                                                    <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                                                    <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal" data-id="<?= $slides[0]['id'] ?>" >
                                                         <i class="fas fa-image"></i>
                                                         <p>Update this slide</p>
                                                     </div>
@@ -158,8 +150,17 @@ $slides = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                             </div>
                                             <div class="col-4" style="aspect-ratio: 75/127;">
                                                 <div class="image-container">
-                                                    <img src="../uploads/sumajkt_prod4.webp" alt="Energy Product">
-                                                    <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                                                    <img src="../<?= $slides[1]['image_url'] ?>" alt="../<?= $slides[0]['image_url'] ?>">
+                                                    <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal" data-id="<?= $slides[1]['id'] ?>" >
+                                                        <i class="fas fa-image"></i>
+                                                        <p>Update this slide</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4" style="aspect-ratio: 75/127;">
+                                                <div class="image-container">
+                                                <img src="../<?= $slides[2]['image_url'] ?>" alt="../<?= $slides[0]['image_url'] ?>">
+                                                <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal" data-id="<?= $slides[2]['id'] ?>" >
                                                         <i class="fas fa-image"></i>
                                                         <p>Update this slide</p>
                                                     </div>
@@ -177,68 +178,130 @@ $slides = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <div class="col-xl-6 col-lg-6">
                             <div class="card shadow mb-4">
                                 <div class="card-body">
+
                                     <!-- Page 2 -->
-                                    <div class="carousel-item">
+                                    <div class="carousel-item active">
                                         <div class="row g-3">
                                             <!-- Larger Div (Aspect Ratio: 140/118) -->
                                             <div class="col-8 " style="aspect-ratio: 135/111;">
-                                                <img src="../<?= $slides[2]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
-                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                <div class="image-container dropdown">
+                                                    <img src="../<?= $slides[3]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
+                                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                                    <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal" data-id="<?= $slides[3]['id'] ?>" >
+                                                        <i class="fas fa-image"></i>
+                                                        <p>Update this slide</p>
+
+                                                    </div>
+                                                </div>
+
                                             </div>
 
                                             <!-- Smaller Divs (Aspect Ratio: 140/78) -->
                                             <div class="col-4">
                                                 <div class="row " style="aspect-ratio: 135/73;">
-                                                    <img src="../<?= $slides[0]['image_url'] ?>" alt="../<?= $slides[0]['image_url'] ?>"
-                                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                                    <div class="image-container dropdown">
+                                                        <img src="../<?= $slides[4]['image_url'] ?>" alt="../<?= $slides[0]['image_url'] ?>"
+                                                            style="width: 100%; height: 100%; object-fit: cover;">
+                                                        <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal" data-id="<?= $slides[4]['id'] ?>" >
+                                                            <i class="fas fa-image"></i>
+                                                            <p>Update this slide</p>
+
+                                                        </div>
+                                                    </div>
                                                 </div>
+
+
                                                 <div class="row mt-1" style="aspect-ratio: 135/73;">
-                                                    <img src="../<?= $slides[2]['image_url'] ?>" alt="../<?= $slides[2]['image_url'] ?>"
-                                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                                    <div class="image-container dropdown">
+
+                                                        <img src="../<?= $slides[5]['image_url'] ?>" alt="../<?= $slides[5]['image_url'] ?>"
+                                                            style="width: 100%; height: 100%; object-fit: cover;">
+                                                        <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal" data-id="<?= $slides[5]['id'] ?>" >
+                                                            <i class="fas fa-image"></i>
+                                                            <p>Update this slide</p>
+
+                                                        </div>
+                                                    </div>
                                                 </div>
+
                                                 <div class="row mt-1" style="aspect-ratio: 135/73;">
-                                                    <img src="../<?= $slides[1]['image_url'] ?>" alt="../<?= $slides[1]['image_url'] ?>"
-                                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                                    <div class="image-container dropdown">
+                                                        <img src="../<?= $slides[6]['image_url'] ?>" alt="../<?= $slides[6]['image_url'] ?>"
+                                                            style="width: 100%; height: 100%; object-fit: cover;">
+                                                        <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal" data-id="<?= $slides[6]['id'] ?>" >
+                                                            <i class="fas fa-image"></i>
+                                                            <p>Update this slide</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-footer">
-                                    <p>Page 1</p>
+                                    <p>Page 2</p>
                                 </div>
                             </div>
                         </div>
 
+
                         <div class="col-xl-6 col-lg-6">
                             <div class="card shadow mb-4">
                                 <div class="card-body">
+
+                                    <!-- Page 2 -->
                                     <div class="carousel-item active">
                                         <div class="row g-3">
-                                            <div class="col-4" style="aspect-ratio: 75/127;">
+                                            <!-- Larger Div (Aspect Ratio: 140/118) -->
+                                            <div class="col-8 " style="aspect-ratio: 135/111;">
                                                 <div class="image-container dropdown">
-                                                    <img src="../uploads/sumajkt_prod4.webp" alt="Energy Product">
-                                                    <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                                                    <img src="../<?= $slides[7]['image_url'] ?>" alt="../<?= $slides[7]['image_url'] ?>"
+                                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                                    <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal" data-id="<?= $slides[7]['id'] ?>" >
                                                         <i class="fas fa-image"></i>
                                                         <p>Update this slide</p>
+
                                                     </div>
                                                 </div>
+
                                             </div>
-                                            <div class="col-4" style="aspect-ratio: 75/127;">
-                                                <div class="image-container">
-                                                    <img src="../<?= $slides[0]['image_url'] ?>" alt="../<?= $slides[0]['image_url'] ?>">
-                                                    <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal">
-                                                        <i class="fas fa-image"></i>
-                                                        <p>Update this slide</p>
+
+                                            <!-- Smaller Divs (Aspect Ratio: 140/78) -->
+                                            <div class="col-4">
+                                                <div class="row " style="aspect-ratio: 135/73;">
+                                                    <div class="image-container dropdown">
+                                                        <img src="../<?= $slides[8]['image_url'] ?>" alt="../<?= $slides[8]['image_url'] ?>"
+                                                            style="width: 100%; height: 100%; object-fit: cover;">
+                                                        <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal" data-id="<?= $slides[7]['id'] ?>" >
+                                                            <i class="fas fa-image"></i>
+                                                            <p>Update this slide</p>
+
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-4" style="aspect-ratio: 75/127;">
-                                                <div class="image-container">
-                                                    <img src="../uploads/sumajkt_prod4.webp" alt="Energy Product">
-                                                    <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal">
-                                                        <i class="fas fa-image"></i>
-                                                        <p>Update this slide</p>
+
+
+                                                <div class="row mt-1" style="aspect-ratio: 135/73;">
+                                                    <div class="image-container dropdown">
+
+                                                        <img src="../<?= $slides[9]['image_url'] ?>" alt="../<?= $slides[9]['image_url'] ?>"
+                                                            style="width: 100%; height: 100%; object-fit: cover;">
+                                                        <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal" data-id="<?= $slides[9]['id'] ?>" >
+                                                            <i class="fas fa-image"></i>
+                                                            <p>Update this slide</p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mt-1" style="aspect-ratio: 135/73;">
+                                                    <div class="image-container dropdown">
+                                                        <img src="../<?= $slides[10]['image_url'] ?>" alt="../<?= $slides[10]['image_url'] ?>"
+                                                            style="width: 100%; height: 100%; object-fit: cover;">
+                                                        <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal" data-id="<?= $slides[10]['id'] ?>" >
+                                                            <i class="fas fa-image"></i>
+                                                            <p>Update this slide</p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -246,39 +309,68 @@ $slides = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     </div>
                                 </div>
                                 <div class="card-footer">
-                                    <p>Page 1</p>
+                                    <p>Page 3</p>
                                 </div>
                             </div>
                         </div>
+
+
                         <div class="col-xl-6 col-lg-6">
                             <div class="card shadow mb-4">
                                 <div class="card-body">
+
+                                    <!-- Page 2 -->
                                     <div class="carousel-item active">
                                         <div class="row g-3">
-                                            <div class="col-4" style="aspect-ratio: 75/127;">
+                                            <!-- Larger Div (Aspect Ratio: 140/118) -->
+                                            <div class="col-8 " style="aspect-ratio: 135/111;">
                                                 <div class="image-container dropdown">
-                                                    <img src="../uploads/sumajkt_prod4.webp" alt="Energy Product">
-                                                    <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                                                    <img src="../<?= $slides[11]['image_url'] ?>" alt="../<?= $slides[11]['image_url'] ?>"
+                                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                                    <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal" data-id="<?= $slides[11]['id'] ?>" >
                                                         <i class="fas fa-image"></i>
                                                         <p>Update this slide</p>
                                                     </div>
                                                 </div>
+
                                             </div>
-                                            <div class="col-4" style="aspect-ratio: 75/127;">
-                                                <div class="image-container">
-                                                    <img src="../<?= $slides[0]['image_url'] ?>" alt="../<?= $slides[0]['image_url'] ?>">
-                                                    <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal">
-                                                        <i class="fas fa-image"></i>
-                                                        <p>Update this slide</p>
+
+                                            <!-- Smaller Divs (Aspect Ratio: 140/78) -->
+                                            <div class="col-4">
+                                                <div class="row " style="aspect-ratio: 135/73;">
+                                                    <div class="image-container dropdown">
+                                                        <img src="../<?= $slides[12]['image_url'] ?>" alt="../<?= $slides[12]['image_url'] ?>"
+                                                            style="width: 100%; height: 100%; object-fit: cover;">
+                                                        <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal" data-id="<?= $slides[12]['id'] ?>" >
+                                                            <i class="fas fa-image"></i>
+                                                            <p>Update this slide</p>
+
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-4" style="aspect-ratio: 75/127;">
-                                                <div class="image-container">
-                                                    <img src="../uploads/sumajkt_prod4.webp" alt="Energy Product">
-                                                    <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal">
-                                                        <i class="fas fa-image"></i>
-                                                        <p>Update this slide</p>
+
+
+                                                <div class="row mt-1" style="aspect-ratio: 135/73;">
+                                                    <div class="image-container dropdown">
+
+                                                        <img src="../<?= $slides[13]['image_url'] ?>" alt="../<?= $slides[13]['image_url'] ?>"
+                                                            style="width: 100%; height: 100%; object-fit: cover;">
+                                                        <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal" data-id="<?= $slides[13]['id'] ?>" >
+                                                            <i class="fas fa-image"></i>
+                                                            <p>Update this slide</p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mt-1" style="aspect-ratio: 135/73;">
+                                                    <div class="image-container dropdown">
+                                                        <img src="../<?= $slides[14]['image_url'] ?>" alt="../<?= $slides[14]['image_url'] ?>"
+                                                            style="width: 100%; height: 100%; object-fit: cover;">
+                                                        <div class="image-overlay" data-bs-toggle="modal" data-bs-target="#uploadModal" data-id="<?= $slides[14]['id'] ?>" >
+                                                            <i class="fas fa-image"></i>
+                                                            <p>Update this slide</p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -286,10 +378,12 @@ $slides = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     </div>
                                 </div>
                                 <div class="card-footer">
-                                    <p>Page 1</p>
+                                    <p>Page 4</p>
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
             </div>
@@ -312,7 +406,7 @@ $slides = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="#" method="POST" enctype="multipart/form-data">
-                    <input type="hidden" name="slide_id" value="1"> <!-- Slide ID, replace with dynamic value -->
+                    <input type="hidden" name="slide_id" value=""> <!-- Slide ID, replace with dynamic value -->
                     <div class="modal-body">
                         <div class="mb-3">
                             <label for="imageFile" class="form-label">Choose an image file</label>
@@ -336,6 +430,27 @@ $slides = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Get all image overlays
+        const imageOverlays = document.querySelectorAll('.image-overlay');
+
+        // Add click event listener to each overlay
+        imageOverlays.forEach(overlay => {
+            overlay.addEventListener('click', () => {
+                // Get the slide ID from the data-id attribute
+                const slideId = overlay.getAttribute('data-id');
+
+                // Set the value of the hidden input field in the modal
+                const slideIdInput = document.querySelector('#uploadModal input[name="slide_id"]');
+                if (slideIdInput) {
+                    slideIdInput.value = slideId;
+                }
+            });
+        });
+    });
+</script>
+
 </body>
 
 </html>
