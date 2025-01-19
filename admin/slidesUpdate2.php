@@ -255,7 +255,7 @@ $slides = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <div class="card shadow mb-4">
                                 <div class="card-body">
 
-                                    <!-- Page 2 -->
+                                    <!-- Page 3 -->
                                     <div class="carousel-item active">
                                         <div class="row g-3">
                                             <!-- Larger Div (Aspect Ratio: 140/118) -->
